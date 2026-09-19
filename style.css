@@ -1,0 +1,287 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#ffd6e7,#cfe5ff);
+    overflow-x:hidden;
+    color:#fff;
+}
+
+/* Welcome Screen */
+
+#welcome{
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(
+        135deg,
+        #ff7eb3,
+        #8ec5fc
+    );
+}
+
+.welcome-box{
+    width:90%;
+    max-width:600px;
+    text-align:center;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.welcome-box h1{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.welcome-box p{
+    font-size:1.2rem;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.welcome-box button{
+    border:none;
+    padding:15px 35px;
+    border-radius:50px;
+    background:#fff;
+    color:#ff4d88;
+    font-size:18px;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:bold;
+}
+
+.welcome-box button:hover{
+    transform:scale(1.08);
+}
+
+/* Main Content */
+
+#main-content{
+    display:none;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    text-align:center;
+    padding:60px 20px;
+}
+
+.hero-img{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:50%;
+    border:8px solid white;
+    box-shadow:0 0 40px rgba(255,255,255,.6);
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:#ff4d88;
+}
+
+.hero h2{
+    color:#5b7fff;
+    margin-top:10px;
+    font-size:2.3rem;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:1.2rem;
+    color:#333;
+}
+
+/* Gallery */
+
+.gallery{
+    padding:80px 20px;
+    text-align:center;
+}
+
+.gallery h2{
+    color:#ff4d88;
+    margin-bottom:40px;
+    font-size:2.5rem;
+}
+
+.slider{
+    position:relative;
+    width:320px;
+    height:450px;
+    margin:auto;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:25px;
+    opacity:0;
+    transition:1s;
+    box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.slide.active{
+    opacity:1;
+}
+
+/* Letter */
+
+.letter{
+    padding:80px 20px;
+}
+
+.letter h2{
+    text-align:center;
+    color:#ff4d88;
+    margin-bottom:30px;
+    font-size:2.5rem;
+}
+
+.letter-box{
+    max-width:900px;
+    margin:auto;
+    background:white;
+    color:#333;
+    padding:40px;
+    border-radius:30px;
+    line-height:2;
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+/* Gift Section */
+
+.gift-section{
+    text-align:center;
+    padding:100px 20px;
+}
+
+.gift-section h2{
+    color:#ff4d88;
+    margin-bottom:40px;
+}
+
+.gift-box{
+    font-size:130px;
+    cursor:pointer;
+    transition:.4s;
+    animation:bounce 2s infinite;
+}
+
+.gift-box:hover{
+    transform:scale(1.2);
+}
+
+@keyframes bounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-15px);
+    }
+}
+
+/* Surprise */
+
+#surprise{
+    display:none;
+    text-align:center;
+    padding:100px 20px;
+}
+
+.couple{
+    width:350px;
+    max-width:90%;
+    border-radius:30px;
+    border:8px solid white;
+    box-shadow:0 0 40px rgba(255,255,255,.5);
+}
+
+#surprise h1{
+    color:#ff3366;
+    margin-top:30px;
+    font-size:3rem;
+}
+
+#surprise h2{
+    color:#5b7fff;
+    margin-top:15px;
+}
+
+#surprise p{
+    margin-top:25px;
+    color:#333;
+    font-size:1.3rem;
+}
+
+/* Floating Hearts */
+
+.hearts::before,
+.hearts::after{
+    content:'❤️';
+    position:fixed;
+    font-size:30px;
+    animation:float 8s linear infinite;
+    opacity:.6;
+}
+
+.hearts::after{
+    left:80%;
+    animation-delay:4s;
+}
+
+@keyframes float{
+    0%{
+        bottom:-50px;
+    }
+
+    100%{
+        bottom:110%;
+    }
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.hero h2{
+    font-size:1.8rem;
+}
+
+.welcome-box h1{
+    font-size:2rem;
+}
+
+.slider{
+    width:280px;
+    height:400px;
+}
+
+.letter-box{
+    padding:25px;
+}
+
+#surprise h1{
+    font-size:2rem;
+}
+
+}
